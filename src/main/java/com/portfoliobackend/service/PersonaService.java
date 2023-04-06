@@ -14,8 +14,13 @@ public class PersonaService implements IPersonaService{
     
 
     @Override
-    public List<Persona> obtenerPersonas() {
-        return personaRepository.findAll();
+    public Persona obtenerPersona() {
+        List<Persona> list = personaRepository.findAll();
+        if (!list.isEmpty()){
+            return list.get(0);
+        }else{
+            return null;
+        }        
     }
 
     @Override

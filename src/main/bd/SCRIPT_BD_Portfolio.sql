@@ -20,9 +20,11 @@ USE `bd_portfolio` ;
 CREATE TABLE IF NOT EXISTS `bd_portfolio`.`persona` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NULL,
-  `apellido` VARCHAR(50) NULL,
+  `descripcion` VARCHAR(100) NULL,
+  `acercade` VARCHAR(500) NULL,
   `imagen` VARCHAR(100) NULL,
-  `descripcion` VARCHAR(500) NULL,
+  `email` VARCHAR(50) NULL,
+  `telefono` VARCHAR(50) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

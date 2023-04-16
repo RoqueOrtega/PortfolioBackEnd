@@ -23,7 +23,6 @@ public class UsuarioController {
     
     @PostMapping("/login")
     public ResponseEntity<Usuario> obtenerUsuario(@RequestBody Credenciales credencial){
-        //return usuarioService.obtenerPorEmailyPassword(credencial.getEmail(), credencial.getPassword());
         Usuario usuario = usuarioService.obtenerPorEmailyPassword(credencial.getEmail(), credencial.getPassword());
         return ResponseEntity.ok(usuario);
     }    

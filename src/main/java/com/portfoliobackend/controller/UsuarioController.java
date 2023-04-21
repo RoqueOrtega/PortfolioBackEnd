@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api")
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portfolio-frontend-roque.web.app")
 public class UsuarioController {
     
     @Autowired

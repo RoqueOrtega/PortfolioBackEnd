@@ -1,7 +1,6 @@
 package com.portfoliobackend.model;
 
 import java.io.Serializable;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +13,6 @@ import lombok.Setter;
 @Table(name = "habilidades")
 @Setter @Getter
 public class Habilidad implements Serializable {
-    //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

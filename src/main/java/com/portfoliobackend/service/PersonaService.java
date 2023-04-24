@@ -1,6 +1,5 @@
 package com.portfoliobackend.service;
 
-import com.portfoliobackend.model.Habilidad;
 import com.portfoliobackend.model.Persona;
 import com.portfoliobackend.repository.PersonaRepository;
 import java.util.List;
@@ -27,6 +26,11 @@ public class PersonaService implements IPersonaService{
     @Override
     public Persona actualizar(Persona persona) {
         return personaRepository.save(persona);
+    }
+
+    @Override
+    public Persona buscar(Integer id) {
+        return personaRepository.findById(id).orElse(null);
     }    
        
 }

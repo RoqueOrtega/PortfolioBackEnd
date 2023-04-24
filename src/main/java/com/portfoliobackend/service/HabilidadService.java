@@ -38,6 +38,4 @@ public class HabilidadService implements IHabilidadService {
         return habilidadRepository.save(habilidad);
     }
 
-
-    
 }

@@ -3,10 +3,8 @@ package com.portfoliobackend.controller;
 
 import com.portfoliobackend.dto.JwtRequest;
 import com.portfoliobackend.dto.JwtResponse;
-import com.portfoliobackend.model.Usuario;
 import com.portfoliobackend.security.JwtTokenUtil;
 import com.portfoliobackend.service.JwtUserDetailsService;
-import com.portfoliobackend.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -36,15 +34,6 @@ public class UsuarioController {
     private JwtTokenUtil jwtTokenUtil;
     
 
-    @Autowired
-    public UsuarioService usuarioService;
-    
-    /*@PostMapping("/login")
-    public ResponseEntity<Usuario> obtenerUsuario(@RequestBody JwtRequest credencial){
-        Usuario usuario = usuarioService.obtenerPorEmailyPassword(credencial.getEmail(), credencial.getPassword());
-        return ResponseEntity.ok(usuario);
-    }*/
-    
     
     @PostMapping("/login")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {

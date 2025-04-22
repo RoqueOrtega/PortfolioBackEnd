@@ -39,7 +39,7 @@ public class HabilidadController {
     @DeleteMapping("/{id}")
     public String eliminar(@PathVariable Integer id) {
         habilidadService.borrar(id);
-        return "Se borro correctamente.";
+        return "Se borro correctamente";
     }
 
     @GetMapping("/{id}")
